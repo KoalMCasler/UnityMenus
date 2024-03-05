@@ -9,6 +9,7 @@ public class CharacterController2D : MonoBehaviour
     private Vector3 moveInput;
     public int moveSpeed = 5;
     public int speedMultiplier = 2;
+    public GameManager gameManager;
     [SerializeField]
     private Animator playerAnim;
     public bool IsSprinting;
@@ -101,8 +102,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Closing game");
-            Application.Quit();
+            gameManager.gameState = GameManager.GameState.Paused;
         }
     }
 
