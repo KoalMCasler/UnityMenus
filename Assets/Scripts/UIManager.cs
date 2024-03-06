@@ -11,6 +11,22 @@ public class UIManager : MonoBehaviour
     public GameObject GameWin;
     public GameObject GameOver;
     public GameManager gameManager;
+    public bool GameIsPause;
+    void Start()
+    {
+        SetMainMenu();
+    }
+    void Update()
+    {
+        if(GameIsPause == true)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
     void ResetObjects()
     {
         MainMenu.SetActive(false);
@@ -24,6 +40,7 @@ public class UIManager : MonoBehaviour
     {
         ResetObjects();
         MainMenu.SetActive(true);
+        GameIsPause = false;
     }
     public void SetOptionsMenu()
     {
@@ -34,6 +51,7 @@ public class UIManager : MonoBehaviour
     {
         ResetObjects();
         PauseMenu.SetActive(true);
+        GameIsPause = true;
     }
     public void SetHUDActive()
     {
@@ -44,10 +62,27 @@ public class UIManager : MonoBehaviour
     {
         ResetObjects();
         GameOver.SetActive(true);
+        GameIsPause = false;
     }
     public void SetGameWin()
     {
         ResetObjects();
         GameWin.SetActive(true);
+        GameIsPause = false;
+    }
+    public void OpenOptionsMenu()
+    {
+        gameManager.gameState = GameManager.GameState.Options;
+    }
+    public void BackFromOptions()
+    {
+        if(!GameIsPause)
+        {
+            gameManager.gameState = GameManager.GameState.MainMenu;
+        }
+        if(GameIsPause)
+        {
+            gameManager.gameState = GameManager.GameState.Paused;
+        }
     }
 }

@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     }
     void Paused()
     {
+        uIManager.GameIsPause = true;
         uIManager.SetPauseMenu();
     }
     void Options()
@@ -75,5 +76,11 @@ public class GameManager : MonoBehaviour
     {
         player.SetActive(false);
         uIManager.SetGameWin();
+    }
+    public void QuitGame()
+    {
+        //Debug line to test quit function in editor
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }

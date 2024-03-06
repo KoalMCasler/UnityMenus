@@ -10,6 +10,7 @@ public class CharacterController2D : MonoBehaviour
     public int moveSpeed = 5;
     public int speedMultiplier = 2;
     public GameManager gameManager;
+    public UIManager uIManager;
     [SerializeField]
     private Animator playerAnim;
     public bool IsSprinting;
@@ -35,7 +36,7 @@ public class CharacterController2D : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        CloseGame();
+        PauseGame();
     }
     void Move()
     {
@@ -98,12 +99,17 @@ public class CharacterController2D : MonoBehaviour
             playerAnim.SetBool("IsFacingRight", false);
         }
     }
-    void CloseGame()
+    void PauseGame()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && uIManager.GameIsPause == false)
         {
             gameManager.gameState = GameManager.GameState.Paused;
         }
+        else if(Input.GetKeyDown(KeyCode.Escape) && uIManager.GameIsPause == true)
+        {
+            gameManager.gameState = GameManager.GameState.Gameplay;
+        }
     }
+
 
 }

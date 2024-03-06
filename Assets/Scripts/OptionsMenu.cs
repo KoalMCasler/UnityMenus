@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public AudioMixer MasterVolume;
     public TMPro.TMP_Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
@@ -38,13 +37,6 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.value = CurrentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
     }
-
-    public void SetVolume(float Volume)
-    {
-        Debug.Log(Volume);
-        MasterVolume.SetFloat("MasterVolume", Volume);
-    }
-
     public void SetFullScreen(bool IsFullScreen)
     {
         Screen.fullScreen = IsFullScreen;
