@@ -261,7 +261,7 @@ Transform:
   m_GameObject: {fileID: 115258991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.32, y: -11.1477, z: 0}
+  m_LocalPosition: {x: -7.51, y: -39.44, z: 0}
   m_LocalScale: {x: 1, y: 4.378808, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71383,7 +71383,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Spawn
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -71396,7 +71396,7 @@ Transform:
   m_GameObject: {fileID: 1094653327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.67, y: -12.07, z: 0}
+  m_LocalPosition: {x: -26.4, y: -38.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75021,8 +75021,8 @@ Transform:
   m_GameObject: {fileID: 1063639202849937206}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.17, y: -10.2776, z: 0}
-  m_LocalScale: {x: 1, y: 14.978246, z: 1}
+  m_LocalPosition: {x: -41.33, y: -38.29, z: 0}
+  m_LocalScale: {x: 1, y: 5.37719, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75114,7 +75114,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.40851706, b: 0, a: 0.24313726}
+  m_Color: {r: 1, g: 0.95179474, b: 0, a: 0.24313726}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -75136,7 +75136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86b4b3b490685549b3c72daa9eb5ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GameOver
+  SceneName: Gameplay_Level2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

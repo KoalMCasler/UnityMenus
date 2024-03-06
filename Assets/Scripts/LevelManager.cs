@@ -23,6 +23,10 @@ public class LevelManager : MonoBehaviour
         {
             gameManager.gameState = GameManager.GameState.MainMenu;
         }
+        if(sceneName.StartsWith("GameOver"))
+        {
+            gameManager.gameState = GameManager.GameState.GameOver;
+        }
         SceneManager.LoadScene(sceneName);
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
