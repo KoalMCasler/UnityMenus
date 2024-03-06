@@ -85,4 +85,9 @@ public class UIManager : MonoBehaviour
             gameManager.gameState = GameManager.GameState.Paused;
         }
     }
+    public void ResumeGame()
+    {
+        GameIsPause = false;
+        gameManager.gameState = GameManager.GameState.Gameplay;
+    }
 }

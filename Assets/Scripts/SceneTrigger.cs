@@ -10,7 +10,6 @@ public class SceneTrigger : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            
             GameObject.FindObjectOfType<LevelManager>().LoadThisScene(SceneName);
         }
     }
